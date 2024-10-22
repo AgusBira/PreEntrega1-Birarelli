@@ -27,13 +27,13 @@ function main(){
                 }else{
                     alert("Ese producto no se encuentra en el catalogo")
                 }
-                productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Salir")
+                productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Salir\n" + "--------------\n" + "Cantidad de productos en el carrito: " + cantProductos + "\n" + "--------------")
             }
             if(cantProductos === 0){
                 alert("No se agrego nada a su carrito")
             }else{
                 if(precioTotal > 10000){
-                    alert("La cantidad de productos en su carrito es " + cantProductos +" y su el precio final es " + descuento(precioTotal) + "$\n" +  "--------------\n"+ "SE LE AGREGO UN DESCUENTO DEL 10% PORQUE SU COMPRA SUPERÓ LOS 10000$")
+                    alert("La cantidad de productos en su carrito es " + cantProductos +" y su el precio final es " + descuento(precioTotal) + "$\n" +  "--------------\n"+ "TIENE UN DESCUENTO DEL 10% PORQUE SU COMPRA SUPERÓ LOS 10000$")
                 }else{
                     alert("La cantidad de productos en su carrito es " + cantProductos +" y su el precio final es " + precioTotal + "$")
                 }
@@ -45,4 +45,4 @@ function main(){
     }
     alert("Gracias por visitar la tienda , vuelva pronto!!")
 }
-main() // LLamo a la funcion main 
+main() // llamo a la funcion main
