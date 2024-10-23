@@ -1,5 +1,7 @@
 /* Funcion para el descuento del 10% */
-function descuento(precio){return precio-(precio*0.1)}
+const descuento = (precio)=>{return precio-(precio*0.1)}
+/* Funcion para sumar 2 valores */
+const sumar = (num1,num2) => {return num1 + num2} 
 function main(){
     /* Precio de los productos */
     const producto1 = 2000
@@ -13,15 +15,15 @@ function main(){
             let precioTotal = 0 // Cantidad del precio todal
             while(productos !== "4"){
                 if (productos === "1"){
-                    precioTotal = precioTotal + producto1
+                    precioTotal = sumar(precioTotal,producto1)
                     cantProductos ++
                     alert("Se agrego el producto 1 a su carrito!!")
                 }else if (productos === "2"){
-                    precioTotal = precioTotal + producto2
+                    precioTotal = sumar(precioTotal,producto2)
                     cantProductos ++
                     alert("Se agrego el producto 2 a su carrito!!")
                 }else if (productos === "3"){
-                    precioTotal = precioTotal + producto3
+                    precioTotal = sumar(precioTotal,producto3)
                     cantProductos ++
                     alert("Se agrego el producto 3 a su carrito!!")
                 }else{
