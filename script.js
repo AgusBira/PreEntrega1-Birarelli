@@ -10,7 +10,7 @@ function main(){
     let menu = prompt("BIENVENIDO A LA TIENDA\n" + "Que le gustaria hacer:\n" + "1 - Comprar\n" + "2 - Salir\n" + "--------------\n" +"OFERTA!!!\n" + "SI SU COMPRA SUPERA LOS 10000$ TIENE UN 10% DE DESCUENTO!!!\n" + "--------------")   //Menu de inicio
     while(menu !== "2"){
         if (menu === "1"){
-            let productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Salir")   // menu de seleccion de productos
+            let productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Contiuar\n"+ "5 - Salir")   // menu de seleccion de productos
             let cantProductos = 0 // Contador de productos
             let precioTotal = 0 // Cantidad del precio todal
             while(productos !== "4"){
@@ -26,10 +26,15 @@ function main(){
                     precioTotal = sumar(precioTotal,producto3)
                     cantProductos ++
                     alert("Se agrego el producto 3 a su carrito!!")
-                }else{
+                }else if (productos === "5"){
+                    precioTotal = 0
+                    cantProductos = 0
+                    break;
+                }
+                else{
                     alert("Ese producto no se encuentra en el catalogo")
                 }
-                productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Salir\n" + "--------------\n" + "Cantidad de productos en el carrito: " + cantProductos + "\n" + "--------------")
+                productos = prompt("Seleccione los productos que quiere comprar:\n" + "1 - Producto 1\n" + "2 - Producto 2\n" + "3 - Producto 3\n" + "4 - Contiuar\n"+ "5 - Salir\n" + "--------------\n" + "Cantidad de productos en el carrito: " + cantProductos + "\n" + "--------------")
             }
             if(cantProductos === 0){
                 alert("No se agrego nada a su carrito")
